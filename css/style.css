@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --primary-color: #0a558f;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+}
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: beige;
+    padding-left: 10px;
+    height: 8vh;
+}
+
+.navbar .logo {
+    padding-left: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    font-weight: 300px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.navbar nav a:hover {
+    border-bottom: 1px solid #fff;
+    transform: scale(0.95);
+}
+
+.navbar .flex-row {
+    justify-content: space-between;
+}
+
+/* ShowCase */
+.showcase {
+    background-color: var(--primary-color);
+    height: 50vh;
+    color: #fff;
+    position: relative;
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase h1 {
+    font-weight: lighter;
+    color: #c4cc50;
+}
+
+.showcase h2 {
+    font-weight: lighter;
+    color: #e71cb5;
+    margin-top: 20px;
+}
+.showcase p {
+    margin: 18px 0;
+}
+.showcase-form {
+    position: relative;
+    top: 30px;
+    padding: 40px;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+    margin: 35px 0;
+    margin-bottom: 0px;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+    border: 0;
+    width: 100%;
+    border-bottom: 2px solid #8f8f8f;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcas::after {
+    content: "";
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    position: absolute;
+    bottom: -50px;
+    height: 100px;
+    transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+    padding-top: 70px;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+    font-weight: lighter;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* CLI */
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+.cli .card h3 {
+    padding-top: 40px;
+}
+
+/* Cloud */
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex-row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.languages .card {
+    margin: 18px 10px 40px;
+    width: 120px;
+    height: 180px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card img {
+    width: 100%;
+    height: 85%;
+    margin-top: 5%;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+/* Featueres */
+.features-head img,
+.docs-head img {
+    width: 200px;
+    height: 200px;
+    justify-self: flex-end;
+}
+.features-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+}
+.features-head h1 {
+    font-weight: lighter;
+}
+
+.features-main .card > i {
+    margin-right: 20px;
+}
+
+.features-main .grid > *:first-child {
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* Docs */
+code,
+pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main .card {
+    height: auto;
+}
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+.docs-main .card ul {
+    list-style: none;
+}
+
+.docs-main .card .alert {
+    background-color: green;
+}
+
+/* Footer */
+.footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 80px;
+}
+
+.footer .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 90px;
+}
+
+.footer nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 14vh;
+        padding-top: 10px;
+    }
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar .nav {
+        display: none;
+    }
+
+    .grid,
+    .showcase .grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase {
+        height: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .showcase-text {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .showcase-form {
+        width: 80%;
+        margin: auto;
+    }
+    .cloud {
+        padding-top: 40px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .container .social {
+        padding-left: 10px;
+        padding-top: -40px;
+        margin-top: 0px;
+    }
+
+    /* fetures */
+    .features-head .grid,
+    .features-sub-head .grid {
+        grid-template-columns: 1fr;
+    }
+    .features-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .features-main .grid > * {
+        grid-column: 1 / span 1;
+        margin: auto;
+    }
+    .features-head img,
+    .features-sub-head img {
+        justify-self: center;
+    }
+}
